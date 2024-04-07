@@ -217,3 +217,19 @@ jQuery(document).ready(function($) {
 	searchShow();
 
 });
+
+var siteSliderRange = function() {
+    $("#slider-range").slider({
+        range: true,
+        min: 0,
+        max: 50000, // Establece el rango máximo en pesos chilenos
+        values: [500, 120000000], // Establece los valores iniciales en pesos chilenos
+        slide: function(event, ui) {
+            var minPrice = ui.values[0] * 1000; // Convierte el valor mínimo a dólares
+            var maxPrice = ui.values[1] * 1000; // Convierte el valor máximo a dólares
+            $("#amount").val("$" + ui.values[0] * 1000 + " - $" + ui.values[1] * 1000); // Actualiza el valor mostrado
+        }
+    });
+    $("#amount").val("$" + ($("#slider-range").slider("values", 0) * 1000) + " - $" + ($("#slider-range").slider("values", 1) * 1000)); // Establece el valor inicial mostrado
+};
+

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <title>VitaFarm </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <style>
+    /* Agrega estilos específicos para el carrito */
+    .carrito-item {
+      border-bottom: 1px solid #dee2e6;
+      padding: 10px 0;
+    }
+
+    .carrito-item img {
+      max-width: 100px;
+      max-height: 100px;
+      margin-right: 20px;
+    }
+
+    .carrito-item p {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="site-wrap">
+
+
+    <div class="site-navbar py-2">
+
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+          </form>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="index.html" class="js-logo-clone">VitaFarm</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li class="active"><a href="index.html">INICIO</a></li>
+                <li><a href="shop.html">Tienda</a></li>
+                <li class="has-children">
+                  <a href="#">Catalogo</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Suplementos</a></li>
+                    <li class="has-children">
+                      <a href="#">Vitaminas</a>
+                      <ul class="dropdown">
+                        <li><a href="#">Suplementos</a></li>
+                        <li><a href="#">Vitaminas</a></li>
+                        <li><a href="#">Dieta &amp; Nutrición</a></li>
+                        <li><a href="#">Té &amp; Café</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Dieta &amp; Nutritición</a></li>
+                    <li><a href="#">Té &amp; Café</a></li>
+                    
+                  </ul>
+                </li>
+                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="icons">
+            <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
+            <a href="tiendadefinitiva.html" class="icons-btn d-inline-block bag">
+              <span class="icon-shopping-bag"></span>
+              <span class="number">2</span>
+            </a>
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
+                class="icon-menu"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a href="index.html">INICIO</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Carrito</strong></div>
+        </div>
+      </div>
+    </div>
+           
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Carrito de Compras - Farmacia</title>
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <style>
+        body {
+          background-color: #f8f9fa;
+          color: #212529;
+        }
+        .card {
+          border: none;
+          border-radius: 10px;
+          background-color: #fff;
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+        }
+        .card:hover {
+          transform: translateY(-5px);
+        }
+        .card-title {
+          color: #007bff;
+        }
+        .btn-primary {
+          background-color: #007bff;
+          border-color: #007bff;
+        }
+        .btn-primary:hover {
+          background-color: #0056b3;
+          border-color: #0056b3;
+        }
+        #carrito {
+          max-height: 300px;
+          overflow-y: auto;
+        }
+        #total {
+          font-weight: bold;
+        }
+        .fade-in {
+          animation: fadeIn 0.5s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container mt-5">
+        <div class="row">
+          <!-- Elementos generados a partir del JSON -->
+          <main id="items" class="col-md-8 row"></main>
+          <!-- Carrito -->
+          <aside class="col-md-4">
+            <h2 class="text-center mb-4">Carrito de Compras</h2>
+            <!-- Elementos del carrito -->
+            <ul id="carrito" class="list-group fade-in"></ul>
+            <hr>
+            <!-- Precio total -->
+            <p class="text-right">Total: <span id="total"></span></p>
+            <button id="boton-vaciar" class="btn btn-danger btn-block">Vaciar Carrito</button>
+            <hr>
+            <!-- Método de pago (simulado) -->
+            <h5 class="text-center mb-3">Seleccione Método de Pago:</h5>
+            <div class="d-flex justify-content-around">
+              <button id="metodo-efectivo" class="btn btn-light">Efectivo</button>
+              <button id="metodo-tarjeta" class="btn btn-light">Tarjeta</button>
+              <button id="metodo-gifcard" class="btn btn-light">Gift Card</button>
+            </div>
+            <div id="info-pago" class="text-center mt-3"></div>
+            <!-- Formulario de pago con tarjeta (simulado) -->
+            <form id="formulario-tarjeta" class="mt-3 d-none">
+              <div class="form-group">
+                <label for="numero-tarjeta">Número de Tarjeta:</label>
+                <input type="text" class="form-control" id="numero-tarjeta" placeholder="1234 5678 9012 3456">
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="fecha-vencimiento">Fecha de Vencimiento:</label>
+                  <input type="text" class="form-control" id="fecha-vencimiento" placeholder="MM/YY">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="cvv">CVV:</label>
+                  <input type="text" class="form-control" id="cvv" placeholder="123">
+                </div>
+              </div>
+              <button type="submit" id="boton-pagar" class="btn btn-primary btn-block">Pagar</button>
+            </form>
+            <!-- Formulario de pago con gift card (simulado) -->
+            <form id="formulario-gifcard" class="mt-3 d-none">
+              <div class="form-group">
+                <label for="codigo-gifcard">Código de Gift Card:</label>
+                <input type="text" class="form-control" id="codigo-gifcard" placeholder="123456 ABCD 789">
+              </div>
+              <button id="canjear-gifcard" class="btn btn-success btn-block">Canjear</button>
+            </form>
+          </aside>
+        </div>
+      </div>
+    
+      <!-- Bootstrap JS y script personalizado -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const baseDeDatos = [
+            {
+              id: 1,
+              nombre: 'Bioderma',
+              precio: 12000,
+              imagen: 'images/product_01.png'
+            },
+            {
+              id: 2,
+              nombre: 'Chanca Piedra',
+              precio: 22000,
+              imagen: 'images/product_02.png'
+            },
+            {
+              id: 3,
+              nombre: 'Natures Way, Umcka, ColdCare, 30 ml',
+              precio: 30000,
+              imagen: 'images/product_03.png'
+            },
+            {
+              id: 4,
+              nombre: 'Cetyl Pure',
+              precio: 12990,
+              imagen: 'images/product_04.png'
+            },
+            {
+              id: 5,
+              nombre: 'CLA Core',
+              precio: 38000,
+              imagen: 'images/product_05.png'
+            },
+            {
+              id: 6,
+              nombre: 'Poo Pourri',
+              precio: 9990,
+              imagen: 'images/product_06.png'
+            },
+            {
+              id: 7,
+              nombre: 'Spinraza',
+              precio: 110000000,
+              imagen: 'images/product_1de1.png'
+            },
+            {
+              id: 8,
+              nombre: 'Acido Nalidíxico',
+              precio: 115000,
+              imagen: 'images/product_2de2.png'
+            },
+            {
+              id: 9,
+              nombre: 'Amitriptilina',
+              precio: 3000,
+              imagen: 'images/product_3de3.png'
+            },
+            {
+              id: 10,
+              nombre: 'Carbamazepina',
+              precio: 990,
+              imagen: 'images/product_4de4.png'
+            },
+            {
+              id: 11,
+              nombre: 'Metoclopramida',
+              precio: 1350,
+              imagen: 'images/product_5de5.png'
+            },
+            {
+              id: 12,
+              nombre: 'Prednisona',
+              precio: 4990,
+              imagen: 'images/product_6de6.png'
+            },
+          ];
+    
+          let carrito = [];
+          const divisa = '$';
+          const DOMitems = document.querySelector('#items');
+          const DOMcarrito = document.querySelector('#carrito');
+          const DOMtotal = document.querySelector('#total');
+          const DOMbotonVaciar = document.querySelector('#boton-vaciar');
+          const DOMmetodoEfectivo = document.querySelector('#metodo-efectivo');
+          const DOMmetodoTarjeta = document.querySelector('#metodo-tarjeta');
+          const DOMmetodoGifcard = document.querySelector('#metodo-gifcard');
+          const DOMinfoPago = document.querySelector('#info-pago');
+          const DOMformularioTarjeta = document.querySelector('#formulario-tarjeta');
+          const DOMformularioGifcard = document.querySelector('#formulario-gifcard');
+          const DOMcanjearGifcard = document.querySelector('#canjear-gifcard');
+          const DOMbotonPagar = document.querySelector('#boton-pagar');
+    
+          function renderizarProductos() {
+            baseDeDatos.forEach((producto) => {
+              const card = document.createElement('div');
+              card.classList.add('card', 'col-sm-12', 'mb-3', 'px-0', 'fade-in');
+              card.innerHTML = `
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="${producto.imagen}" class="card-img" alt="${producto.nombre}">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">${producto.nombre}</h5>
+                      <p class="card-text">${divisa}${producto.precio}</p>
+                      <button class="btn btn-primary" data-id="${producto.id}">Agregar al Carrito</button>
+                    </div>
+                  </div>
+                </div>
+              `;
+              DOMitems.appendChild(card);
+              card.querySelector('button').addEventListener('click', () => {
+                agregarProducto(producto.id);
+              });
+            });
+          }
+    
+          function agregarProducto(id) {
+            const productoExistente = carrito.find(item => item.id === id);
+            if (productoExistente) {
+              productoExistente.cantidad++;
+            } else {
+              carrito.push({ id: id, cantidad: 1 });
+            }
+            renderizarCarrito();
+          }
+    
+          function renderizarCarrito() {
+            DOMcarrito.innerHTML = '';
+            carrito.forEach(item => {
+              const producto = baseDeDatos.find(prod => prod.id === item.id);
+              const li = document.createElement('li');
+              li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center', 'fade-in');
+              li.innerHTML = `
+                ${producto.nombre} - ${divisa}${producto.precio} x ${item.cantidad}
+                <button class="btn btn-sm btn-danger" data-id="${producto.id}">Eliminar</button>
+              `;
+              li.querySelector('button').addEventListener('click', () => {
+                eliminarProducto(producto.id);
+              });
+              DOMcarrito.appendChild(li);
+            });
+    
+            const total = carrito.reduce((acc, item) => {
+              const producto = baseDeDatos.find(prod => prod.id === item.id);
+              return acc + (producto.precio * item.cantidad);
+            }, 0);
+            DOMtotal.innerText = `${divisa}${total.toFixed(2)}`;
+          }
+    
+          function eliminarProducto(id) {
+            carrito = carrito.filter(item => item.id !== id);
+            renderizarCarrito();
+          }
+    
+          function vaciarCarrito() {
+            carrito = [];
+            renderizarCarrito();
+          }
+    
+          function seleccionarMetodoPago(metodo) {
+            if (metodo === 'efectivo') {
+              DOMinfoPago.innerHTML = `
+                <p class="text-success">Pago en efectivo realizado con éxito. Gracias por su compra.</p>
+              `;
+              DOMformularioTarjeta.classList.add('d-none');
+              DOMformularioGifcard.classList.add('d-none');
+              vaciarCarrito();
+            } else if (metodo === 'tarjeta') {
+              DOMinfoPago.innerHTML = '';
+              DOMformularioTarjeta.classList.remove('d-none');
+              DOMformularioGifcard.classList.add('d-none');
+            } else if (metodo === 'gifcard') {
+              DOMinfoPago.innerHTML = '';
+              DOMformularioTarjeta.classList.add('d-none');
+              DOMformularioGifcard.classList.remove('d-none');
+            }
+          }
+    
+          function canjearGiftCard() {
+            const codigoGifcard = document.getElementById('codigo-gifcard').value;
+            if (codigoGifcard.trim()) {
+              alert('Comprado con gift card correctamente.');
+              DOMformularioGifcard.reset();
+              vaciarCarrito();
+            } else {
+              alert('Por favor, ingrese el código de la Gift Card.');
+            }
+          }
+    
+          function redirigirAgradecimiento() {
+            window.location.href = "file:///C:/Users/sebas/Documents/webfarma/thankyou.html";
+          }
+    
+          DOMbotonVaciar.addEventListener('click', vaciarCarrito);
+          DOMmetodoEfectivo.addEventListener('click', () => seleccionarMetodoPago('efectivo'));
+          DOMmetodoTarjeta.addEventListener('click', () => seleccionarMetodoPago('tarjeta'));
+          DOMmetodoGifcard.addEventListener('click', () => seleccionarMetodoPago('gifcard'));
+          DOMcanjearGifcard.addEventListener('click', canjearGiftCard);
+          DOMbotonPagar.addEventListener('click', redirigirAgradecimiento);
+    
+          // Manejo del envío del formulario de pago con tarjeta (simulado)
+          DOMformularioTarjeta.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const numeroTarjeta = document.getElementById('numero-tarjeta').value;
+            const fechaVencimiento = document.getElementById('fecha-vencimiento').value;
+            const cvv = document.getElementById('cvv').value;
+            if (numeroTarjeta.trim() && fechaVencimiento.trim() && cvv.trim()) {
+              alert('Comprado con éxito.');
+              DOMformularioTarjeta.reset();
+              vaciarCarrito();
+            } else {
+              alert('Por favor, complete todos los campos del formulario.');
+            }
+          });
+    
+          renderizarProductos();
+        });
+      </script>
+    </body>
+    </html>
+          
+
+<br>
+<br>
+<div class="site-section bg-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="text-white mb-4">Oficinas</h2>
+      </div>
+      <div class="col-lg-4">
+        <div class="p-4 bg-white mb-3 rounded">
+          <span class="d-block text-black h6 text-uppercase">Santiago</span>
+          <p class="mb-0">123 Avenida Independecia, Santiago, Chile</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="p-4 bg-white mb-3 rounded">
+          <span class="d-block text-black h6 text-uppercase">Osorno</span>
+          <p class="mb-0">789 Mackenna, Osorno, Chile</p>
+
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="p-4 bg-white mb-3 rounded">
+          <span class="d-block text-black h6 text-uppercase">Puerto Montt</span>
+          <p class="mb-0">567 Benavente, Puerto Montt, Chile</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+
+        <div class="block-7">
+          <h3 class="footer-heading mb-4">Sobre nosotros</h3>
+          <p>En VitaFarm, nuestra misión es promover la salud y el bienestar ofreciendo una amplia gama de productos de alta calidad. Nos comprometemos a proporcionar a nuestros clientes una experiencia de compra conveniente y confiable, respaldada por un equipo dedicado y experto en salud.
+            Con un enfoque en la excelencia y la atención al cliente, en VitaFarm nos esforzamos por ser tu destino de confianza para todas tus necesidades de salud y bienestar.</p>
+        </div>
+
+      </div>
+      <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
+        <h3 class="footer-heading mb-4">Enlaces rápidos</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Suplementos</a></li>
+          <li><a href="#">Vitaminas</a></li>
+          <li><a href="#">Dieta &amp; Nutrition</a></li>
+          <li><a href="#">Té &amp; Café</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="block-5 mb-5">
+          <h3 class="footer-heading mb-4">Información de Contacto</h3>
+          <ul class="list-unstyled">
+            <li class="address">123 Avenida Independecia, Santiago, Chile</li>
+            <li class="phone"><a href="celular://23923929210">+56 9 5276 9912</a></li>
+            <li class="email">somosvitafram@vitafram.com</li>
+          </ul>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="row pt-5 mt-5 text-center">
+      <div class="col-md-12">
+        <p>
+          
+          
+          <script></script>
+            <i class="" aria-hidden="true"></i> <a href="" target="_blank"
+            class="text-primary"></a>
+          
+        </p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+</div>
+
